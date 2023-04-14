@@ -1,0 +1,70 @@
+{
+  "program": {
+    "fileInfos": {
+      "../../node_modules/typescript/lib/lib.d.ts": {
+        "version": "2dc8c927c9c162a773c6bb3cdc4f3286c23f10eedc67414028f9cb5951610f60",
+        "signature": "2dc8c927c9c162a773c6bb3cdc4f3286c23f10eedc67414028f9cb5951610f60",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/typescript/lib/lib.es5.d.ts": {
+        "version": "70ae6416528e68c2ee7b62892200d2ca631759943d4429f8b779b947ff1e124d",
+        "signature": "70ae6416528e68c2ee7b62892200d2ca631759943d4429f8b779b947ff1e124d",
+        "affectsGlobalScope": true
+      },
+      "../../node_modules/typescript/lib/lib.dom.d.ts": {
+        "version": "9affb0a2ddc57df5b8174c0af96c288d697a262e5bc9ca1f544c999dc64a91e6",
+        "signature": "9affb0a2ddc57df5b8174c0af96c288d697a262e5bc9ca1f544c999dc64a91e6",
+        "affectsGlobalScope": true
+      },
+      "../../node_modules/typescript/lib/lib.webworker.importscripts.d.ts": {
+        "version": "7fac8cb5fc820bc2a59ae11ef1c5b38d3832c6d0dfaec5acdb5569137d09a481",
+        "signature": "7fac8cb5fc820bc2a59ae11ef1c5b38d3832c6d0dfaec5acdb5569137d09a481",
+        "affectsGlobalScope": true
+      },
+      "../../node_modules/typescript/lib/lib.scripthost.d.ts": {
+        "version": "097a57355ded99c68e6df1b738990448e0bf170e606707df5a7c0481ff2427cd",
+        "signature": "097a57355ded99c68e6df1b738990448e0bf170e606707df5a7c0481ff2427cd",
+        "affectsGlobalScope": true
+      },
+      "./src/user.ts": {
+        "version": "9a3b79a13bee150da74b66d02c14e872da02ad55d428313e13ff300ac5e12e36",
+        "signature": "ca9aecd64dc255f0baf49bd64df67a0cf999ddce78f4b4d95a3267ab63764007",
+        "affectsGlobalScope": false
+      },
+      "./src/index.ts": {
+        "version": "53ad554ed65443a1ea2ff0be418fc879cf7c6d2ff73da66d104862b2e0c89183",
+        "signature": "672db454785c843187dad7507a761d5b2c5c075107031e09a6620dfadb375864",
+        "affectsGlobalScope": false
+      }
+    },
+    "options": {
+      "declaration": true,
+      "declarationMap": true,
+      "sourceMap": true,
+      "composite": true,
+      "outDir": "./dist",
+      "rootDir": "./src",
+      "configFilePath": "./tsconfig.json"
+    },
+    "referencedMap": {
+      "./src/index.ts": [
+        "./src/user.ts"
+      ]
+    },
+    "exportedModulesMap": {
+      "./src/index.ts": [
+        "./src/user.ts"
+      ]
+    },
+    "semanticDiagnosticsPerFile": [
+      "../../node_modules/typescript/lib/lib.d.ts",
+      "../../node_modules/typescript/lib/lib.dom.d.ts",
+      "../../node_modules/typescript/lib/lib.es5.d.ts",
+      "../../node_modules/typescript/lib/lib.scripthost.d.ts",
+      "../../node_modules/typescript/lib/lib.webworker.importscripts.d.ts",
+      "./src/index.ts",
+      "./src/user.ts"
+    ]
+  },
+  "version": "3.9.10"
+}

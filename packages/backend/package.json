@@ -1,0 +1,17 @@
+{
+  "name": "@monorepo/backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "gbarska",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "yarn build && node dist/index.js"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@monorepo/shared": "1.0.0"
+  }
+}

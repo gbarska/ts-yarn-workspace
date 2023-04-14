@@ -1,0 +1,17 @@
+{
+  "name": "ts-yarn-workspace-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "gbarska",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "backend": "yarn workspace @monorepo/backend",
+    "shared": "yarn workspace @monorepo/shared"
+  }
+}
