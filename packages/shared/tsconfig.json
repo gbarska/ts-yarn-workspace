@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    /* Basic Options */
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
