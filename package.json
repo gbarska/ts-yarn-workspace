@@ -11,7 +11,6 @@
     ]
   },
   "scripts": {
-    "backend": "yarn workspace @monorepo/backend",
-    "shared": "yarn workspace @monorepo/shared"
+    "client:dev": "yarn workspace @monorepo/client run dev"
   }
 }
