@@ -2,7 +2,7 @@
     "compilerOptions": {
         /* Basic Options */
         "target": "ESNext",
-        "module": "ESNext",
+        "module": "commonjs",
         "lib": ["ESNext"],
         
         /* Strict Type-Checking Options */

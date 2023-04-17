@@ -58,3 +58,5 @@ dist/
 
 # dotenv environment variables file
 .env
+
+tsconfig.tsbuildinfo
