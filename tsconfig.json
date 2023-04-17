@@ -4,6 +4,12 @@
         "module": "commonjs",
         "moduleResolution": "node",
         
+        "declaration": true,
+        "declarationMap": true,
+        
+        "sourceMap": true,
+        "composite": true,
+        
         "strict": true,
         "esModuleInterop": true,
         

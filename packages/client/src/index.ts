@@ -1,5 +1,5 @@
 import { Chicken } from "./chicken";
-import { http } from "@monorepo/shared";
+import { http } from "@monorepo/core";
 
 console.log('hello ' + 'world');
 
