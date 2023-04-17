@@ -10,24 +10,9 @@ enum StatusCode {
 const headers: Readonly<Record<string, string | boolean>> = {
   Accept: "application/json",
   "Content-Type": "application/json; charset=utf-8",
-  "Access-Control-Allow-Credentials": true,
+  // "Access-Control-Allow-Credentials": true,
   "X-Requested-With": "XMLHttpRequest",
 };
-
-// // We can use the following function to inject the JWT token through an interceptor
-// // We get the `accessToken` from the localStorage that we set when we authenticate
-// const injectToken = (config: AxiosRequestConfig): AxiosRequestConfig => {
-//   try {
-//     const token = localStorage.getItem("accessToken");
-
-//     if (token != null) {
-//       config.headers.Authorization = `Bearer ${token}`;
-//     }
-//     return config;
-//   } catch (error:any) {
-//     throw new Error("Error while injecting token");
-//   }
-// };
 
 class Http {
   private instance: AxiosInstance | null = null;
@@ -38,24 +23,22 @@ class Http {
 
   initHttp() {
     const http = axios.create({
-      baseURL: "http://localhost:3000",
+      baseURL: "",
       headers,
-      withCredentials: true,
     });
 
-    http.interceptors.request.use(function (config) {
-      // Do something before request is sent
-      return config;
-    }, function (error) {
-      // Do something with request error
-      return Promise.reject(error);
-    });
+    http.interceptors.request.use(
+         (config) => { return config; }, 
+         (error) => { 
+          console.log("error.."); 
+          return Promise.reject(error);
+         }
+    );
 
     http.interceptors.response.use(
       (response) => response,
       (error) => {
-        // return this.handleError(error);
-        throw new Error("Error while requesting data");
+       return Promise.reject(error);
       }
     );
 
@@ -90,33 +73,6 @@ class Http {
   delete<T = any, R = AxiosResponse<T>>(url: string, config?: AxiosRequestConfig): Promise<R> {
     return this.http.delete<T, R>(url, config);
   }
-
-  // // Handle global app errors
-  // // We can handle generic app errors depending on the status code
-  // private handleError(error) {
-  //   // const { status } = error;
-
-  //   // switch (status) {
-  //   //   case StatusCode.InternalServerError: {
-  //   //     // Handle InternalServerError
-  //   //     break;
-  //   //   }
-  //   //   case StatusCode.Forbidden: {
-  //   //     // Handle Forbidden
-  //   //     break;
-  //   //   }
-  //   //   case StatusCode.Unauthorized: {
-  //   //     // Handle Unauthorized
-  //   //     break;
-  //   //   }
-  //   //   case StatusCode.TooManyRequests: {
-  //   //     // Handle TooManyRequests
-  //   //     break;
-  //   //   }
-  //   // }
-
-  //   return Promise.reject(error);
-  // }
 }
 
 export const http = new Http();

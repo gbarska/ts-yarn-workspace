@@ -1,10 +1,16 @@
-import { Chicken } from "./chicken";
-import { http } from "@monorepo/core";
+import { http, User } from "@monorepo/core";
 
-console.log('hello ' + 'world');
+class ListResponse<T> {
+   results: T[] = [];
+}
 
-const httpRequest = http.get('https://google.com'); 
+const getData = async () => {
+    const response = await http.get<ListResponse<User>>('https://pokeapi.co/api/v2/ability');
+    var users: User[] = response.data.results;
 
-const chicken = new Chicken();
+    users.forEach(user => {
+          console.log(user.name);
+    });
+}
 
-chicken.cluck();
+getData();
