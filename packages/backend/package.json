@@ -4,6 +4,7 @@
   "main": "index.js",
   "author": "gbarska",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "build": "tsc --build",
     "start": "yarn build && node dist/index.js"

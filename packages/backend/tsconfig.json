@@ -1,9 +1,16 @@
 {
   "compilerOptions": {
-    /* Basic Options */
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "sourceMap": true,
     "outDir": "dist",
-    "rootDir": "src"
+    "rootDir": "src",
   },
-  "include": ["src"],
-  "references": [{ "path": "../shared" }]
+  "include": [
+    "src",
+    "index.d.ts"
+  ],
+  "references": [
+    { "path": "../shared" }
+  ]
 }
