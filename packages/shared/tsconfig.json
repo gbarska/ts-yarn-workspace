@@ -1,12 +1,18 @@
 {
   "compilerOptions": {
+    "target": "es2018",
     /* Basic Options */
     "declaration": true,
     "declarationMap": true,
     "sourceMap": true,
     "composite": true,
     "outDir": "dist",
-    "rootDir": "src"
+    "rootDir": "src",
+    "lib": [
+      "ES2018",
+      "DOM",
+      "ScriptHost"
+    ],
   },
   "include": ["src"]
 }
