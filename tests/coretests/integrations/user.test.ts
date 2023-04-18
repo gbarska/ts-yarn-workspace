@@ -18,7 +18,7 @@ describe('User', () => {
     describe('Create user', () => {
         it('should create user', async () => {
            const user = createUser('John', 30);
-            expect(user.age).toEqual(30);
+            expect(user.age).toEqual(31);
             expect(user.name).toEqual('John');
         })
     })

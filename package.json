@@ -13,7 +13,9 @@
   },
   "scripts": {
     "core:test": "yarn workspace @monorepo/coretests run test",
+    "core:test:watch": "yarn workspace @monorepo/coretests run test:watch",
     "build": "yarn workspaces foreach -t run build",
+    "core:build": "yarn workspace @monorepo/core run build",
     "client:dev": "yarn workspace @monorepo/client run dev",
     "client:build": "yarn workspace @monorepo/client run build"
   }

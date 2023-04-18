@@ -1,10 +1,15 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import {autoInjectable} from "tsyringe";
 
 enum StatusCode {
   Unauthorized = 401,
   Forbidden = 403,
   TooManyRequests = 429,
   InternalServerError = 500,
+}
+
+export class ListResponse<T> {
+  results: T[] = [];
 }
 
 const headers: Readonly<Record<string, string | boolean>> = {
@@ -14,7 +19,8 @@ const headers: Readonly<Record<string, string | boolean>> = {
   "X-Requested-With": "XMLHttpRequest",
 };
 
-class Http {
+@autoInjectable()
+export class Http {
   private instance: AxiosInstance | null = null;
 
   private get http(): AxiosInstance {

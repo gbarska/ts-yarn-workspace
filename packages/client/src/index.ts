@@ -1,16 +1,19 @@
-import { http, User } from "@monorepo/core";
-
-class ListResponse<T> {
-   results: T[] = [];
-}
+import { SimpleInjector, UserService } from "@monorepo/core";
 
 const getData = async () => {
-    const response = await http.get<ListResponse<User>>('https://pokeapi.co/api/v2/ability');
-    var users: User[] = response.data.results;
+    const service = SimpleInjector.getInstance(UserService);
 
-    users.forEach(user => {
-          console.log(user.name);
+    const response = await service.getUsers();
+
+    response.results.forEach(user => {
+        console.log(user.name);
     });
+
+    // const response = await http.get<ListResponse<User>>('https://pokeapi.co/api/v2/ability');
+    // var users: User[] = response.data.results;
+    // users.forEach(user => {
+    //       console.log(user.name);
+    // });
 }
 
 getData();
